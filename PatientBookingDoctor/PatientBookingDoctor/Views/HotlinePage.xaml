@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PatientBookingDoctor.Views.HotlinePage"
+             Title="Hotline">
+    <Grid Margin="15,20,15,15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="logo.png" />
+
+        <Grid Grid.Row="1"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   x:Name="company_name"
+
+                   Style="{DynamicResource TitleStyle}"
+                   Text="Công ty Cổ phần Giải pháp Công nghệ H2A Việt Nam" />
+            <Label x:Name="company_head_title"
+                   Grid.Row="1"
+                   FontSize="16"
+                   Style="{DynamicResource SubtitleStyle}"
+                   Text="Trụ sở chính:" />
+            <Label x:Name="company_head"
+                   Grid.Row="2"
+                   FontSize="16"
+                   Style="{DynamicResource CaptionStyle}"
+                   Text="93B Hưng Đạo Vương Biên Hòa, Đồng Nai" />
+            <Label x:Name="company_office_title"
+                   Grid.Row="3"
+                   Style="{DynamicResource SubtitleStyle}"
+                   FontSize="16"
+                   Text="Văn phòng:" />
+            <Label x:Name="company_office"
+                   Grid.Row="4"
+                   FontSize="16"
+                   Text="128/55/1/22 Lý Văn Sâm Biên Hòa, Đồng Nai" />
+            <Label x:Name="company_phone1_title"
+                   Grid.Row="5"
+                   FontSize="16"
+                   Style="{DynamicResource SubtitleStyle}"
+                   Text="Điện thoại:" />
+            <Label x:Name="company_phone1"
+                   Grid.Row="6"
+                   FontSize="16"
+                   Text="+84 982 068 806" />
+            <Label x:Name="company_phone2_title"
+                   Grid.Row="7"
+                   FontSize="16"
+                   Style="{DynamicResource SubtitleStyle}"
+                   Text="Hotline:" />
+            <Label x:Name="company_phone2"
+                   Grid.Row="8"
+                   FontSize="16"
+                   Text="+84 902 703 008" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

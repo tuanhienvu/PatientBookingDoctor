@@ -1,19 +1,17 @@
-﻿using PatientBookingDoctor.Services;
-using PatientBookingDoctor.Views;
-using System;
+﻿using System;
+using System.IO;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace PatientBookingDoctor
 {
     public partial class App : Application
     {
+        public static string FolderPath { get; private set; }
 
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
+            FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
             MainPage = new AppShell();
         }
 
