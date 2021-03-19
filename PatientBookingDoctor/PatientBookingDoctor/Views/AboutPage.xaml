@@ -3,32 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PatientBookingDoctor.Views.AboutPage"
              Title="About">
-    <!-- Layout children in two rows -->
-    <Grid RowDefinitions="Auto,*">
-        <Image Source="xamarin_logo.png"
-               BackgroundColor="{StaticResource AppPrimaryColor}"
-               Opacity="0.85"
-               VerticalOptions="Center"
-               HeightRequest="64" />
-        <!-- Layout children vertically -->
-        <StackLayout Grid.Row="1"
-                     Margin="{StaticResource PageMargin}"
-                     Spacing="20">
-            <Label FontSize="22">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Notes"
-                                  FontAttributes="Bold"
-                                  FontSize="22" />
-                            <Span Text=" v1.0" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
-            <Button Text="Learn more"
-                    Clicked="OnButtonClicked" />
-        </StackLayout>
-    </Grid>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    <!-- <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}"> -->
+    <!--     <CollectionView x:Name="ItemsListView" -->
+    <!--                     ItemsSource="{Binding Items}" -->
+    <!--                     SelectionMode="None"> -->
+    <!--         <CollectionView.ItemTemplate> -->
+    <!--             <DataTemplate> -->
+    <!--                 <StackLayout Padding="10" x:DataType="model:Item"> -->
+    <!--                     <Label Text="{Binding Text}"  -->
+    <!--                            LineBreakMode="NoWrap"  -->
+    <!--                            Style="{DynamicResource ListItemTextStyle}"  -->
+    <!--                            FontSize="16" /> -->
+    <!--                     <Label Text="{Binding Description}"  -->
+    <!--                            LineBreakMode="NoWrap" -->
+    <!--                            Style="{DynamicResource ListItemDetailTextStyle}" -->
+    <!--                            FontSize="13" /> -->
+    <!--                     <StackLayout.GestureRecognizers> -->
+    <!--                         <TapGestureRecognizer  -->
+    <!--                             NumberOfTapsRequired="1" -->
+    <!--                             Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		 -->
+    <!--                             CommandParameter="{Binding .}"> -->
+    <!--                         </TapGestureRecognizer> -->
+    <!--                     </StackLayout.GestureRecognizers> -->
+    <!--                 </StackLayout> -->
+    <!--             </DataTemplate> -->
+    <!--         </CollectionView.ItemTemplate> -->
+    <!--     </CollectionView> -->
+    <!-- </RefreshView> -->
 </ContentPage>

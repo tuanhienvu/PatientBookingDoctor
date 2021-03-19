@@ -25,15 +25,20 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
+    <!-- <FlyoutItem Title="Home" Icon="icon_feed.png"> -->
+    <!--     <ShellContent Route="HomePage" ContentTemplate="{DataTemplate views:HomePage}" /> -->
+    <!-- </FlyoutItem> -->
+    <!-- -->
+    <!-- <FlyoutItem Title="Hotline" Icon="icon_about.png"> -->
+    <!-- <ShellContent Route="HotlinePage" ContentTemplate="{DataTemplate views:HotlinePage}" /> -->
+    <!-- </FlyoutItem> -->
+    <!-- -->
     <!-- <FlyoutItem Title="About" Icon="icon_about.png"> -->
     <!--     <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate views:AboutPage}" /> -->
     <!-- </FlyoutItem> -->
-    <!-- <FlyoutItem Title="Browse" Icon="icon_feed.png"> -->
-    <!--     <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate views:HotlinePage}" /> -->
-    <!-- </FlyoutItem> -->
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem Text="Logout" StyleClass="MenuItemsLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>
     <!-- Display a bottom tab bar containing three tabs -->
     <TabBar x:Name="main_nav" Route="main">
@@ -47,7 +52,7 @@
              Title="Home">
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
-        <Tab x:Name="nav_settings" 
+        <Tab x:Name="nav_settings"
              Icon="menu_white.png"
              Title="Menu">
             <ShellContent ContentTemplate="{DataTemplate views:MenuPage}" />

@@ -9,23 +9,26 @@
     
     <StackLayout>
         <Image Aspect="AspectFill" Source="Cute_Friendship.jpg" />
-        <ScrollView Margin="5,10,5,10">
+        <ScrollView Margin="10,30,10,10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
             <Grid >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="180" />
-                    <RowDefinition Height="180" />
-                    <RowDefinition Height="180" />
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="110" />
+
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Margin="10,10,10, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="0" Grid.Column="1" Margin="10,10,10, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="1" Grid.Column="0" Margin="10,10,10, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="1" Grid.Column="1" Margin="10,10,10, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="2" Grid.Column="0" Margin="10,10,10, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="2" Grid.Column="1" Margin="10,10,10, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
+                <Image Grid.Row="0" Grid.Column="0" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
+                <Image Grid.Row="0" Grid.Column="1" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
+                <Image Grid.Row="0" Grid.Column="2" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
+                <Image Grid.Row="1" Grid.Column="0" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
+                <Image Grid.Row="1" Grid.Column="1" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
+                <Image Grid.Row="1" Grid.Column="2" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
             </Grid>
         </ScrollView>
     </StackLayout>
