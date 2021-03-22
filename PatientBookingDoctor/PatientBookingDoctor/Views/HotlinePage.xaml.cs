@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace PatientBookingDoctor.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HotlinePage : ContentPage
+    public partial class HotlinePage : CarouselPage
     {
         public HotlinePage()
         {

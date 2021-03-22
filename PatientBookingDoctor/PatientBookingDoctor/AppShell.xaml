@@ -4,6 +4,13 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:PatientBookingDoctor.Views"
        x:Class="PatientBookingDoctor.AppShell">
+    <Shell.ToolbarItems>
+        <ToolbarItem Text="Example Item"
+                     IconImageSource="icon_feed.png"
+                     Order="Primary"
+                     Priority="0" />
+    </Shell.ToolbarItems>
+    
     <Shell.Resources>
         <!-- Style Shell elements -->
         <Style x:Key="BaseStyle"
@@ -15,8 +22,9 @@
             <Setter Property="Shell.TitleColor"
                     Value="{StaticResource SecondaryColor}" />
             <Setter Property="Shell.TabBarUnselectedColor"
-                    Value="#95FFFFFF"/>
+                    Value="#95FFFFFF" />
         </Style>
+        
         <Style TargetType="TabBar"
                BasedOn="{StaticResource BaseStyle}" />
     </Shell.Resources>
@@ -25,37 +33,51 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <!-- <FlyoutItem Title="Home" Icon="icon_feed.png"> -->
-    <!--     <ShellContent Route="HomePage" ContentTemplate="{DataTemplate views:HomePage}" /> -->
-    <!-- </FlyoutItem> -->
-    <!-- -->
-    <!-- <FlyoutItem Title="Hotline" Icon="icon_about.png"> -->
-    <!-- <ShellContent Route="HotlinePage" ContentTemplate="{DataTemplate views:HotlinePage}" /> -->
-    <!-- </FlyoutItem> -->
-    <!-- -->
-    <!-- <FlyoutItem Title="About" Icon="icon_about.png"> -->
-    <!--     <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate views:AboutPage}" /> -->
-    <!-- </FlyoutItem> -->
+    <FlyoutItem Title="Trang chủ" Icon="home_black.png">
+        <ShellContent Route="HomePage" ContentTemplate="{DataTemplate views:HomePage}" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Thông tin cá nhân" Icon="user_info_white.png">
+        <ShellContent Route="UserInfoPage" ContentTemplate="{DataTemplate views:UserInfoPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Trang Giới thiệu" Icon="about_white.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate views:AboutPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Hotline" Icon="phone.png">
+        <ShellContent Route="HotlinePage" ContentTemplate="{DataTemplate views:HotlinePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Đăng nhập" Icon="login_white.png" IsVisible="True">
+        <ShellContent Route="Login" ContentTemplate="{DataTemplate views:LoginPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Đăng xuất" Icon="logout_white.png" IsVisible="True">
+        <ShellContent Route="Logout" ContentTemplate="{DataTemplate views:LoginPage}" />
+    </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Logout" StyleClass="MenuItemsLayoutStyle" Clicked="OnMenuItemClicked">
-    </MenuItem>
+    <!-- <MenuItem Text="Logout" StyleClass="MenuItemsLayoutStyle" Clicked="OnMenuItemClicked" /> -->
+
     <!-- Display a bottom tab bar containing three tabs -->
-    <TabBar x:Name="main_nav" Route="main">
-        <Tab x:Name="nav_hotline" 
-             Icon="phone.png"
-             Title="Hotline">
-            <ShellContent ContentTemplate="{DataTemplate views:HotlinePage}" />
-        </Tab>
-        <Tab x:Name="nav_home" 
-             Icon="home_white.png"
-             Title="Home">
-            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
-        </Tab>
-        <Tab x:Name="nav_settings"
-             Icon="menu_white.png"
-             Title="Menu">
-            <ShellContent ContentTemplate="{DataTemplate views:MenuPage}" />
-        </Tab>
-    </TabBar>
+    <!-- <TabBar x:Name="main_nav" Route="main"> -->
+    <!--     <Tab x:Name="nav_hotline"  -->
+    <!--          Icon="phone.png" -->
+    <!--          Title="Hotline"> -->
+    <!--         <ShellContent ContentTemplate="{DataTemplate views:HotlinePage}" /> -->
+    <!--     </Tab> -->
+    <!--     <Tab x:Name="nav_home"  -->
+    <!--          Icon="home_white.png" -->
+    <!--          Title="Home"> -->
+    <!--         <ShellContent ContentTemplate="{DataTemplate views:HomePage}" /> -->
+    <!--     </Tab> -->
+    <!--     <Tab x:Name="nav_settings" -->
+    <!--          Icon="menu_white.png" -->
+    <!--          Title="Menu"> -->
+    <!--         <ShellContent ContentTemplate="{DataTemplate views:MenuPageFlyout}" /> -->
+    <!--     </Tab> -->
+    <!-- </TabBar> -->
+
 </Shell>

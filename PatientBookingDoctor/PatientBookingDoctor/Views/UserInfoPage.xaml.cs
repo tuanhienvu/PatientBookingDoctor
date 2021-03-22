@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace PatientBookingDoctor.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MenuDetail : ContentPage
+    public partial class UserInfoPage : ContentPage
     {
-        public MenuDetail()
+        public UserInfoPage()
         {
             InitializeComponent();
         }

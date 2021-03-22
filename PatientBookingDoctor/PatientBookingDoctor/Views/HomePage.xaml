@@ -1,35 +1,113 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PatientBookingDoctor.Views.HomePage"
-             Title="Trang chủ"
-             NavigationPage.HasNavigationBar="false">
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="PatientBookingDoctor.Views.HomePage"
+              Title="Quản lý đặt lịch KCB">
+    <ContentPage>
 
-    
-    <StackLayout>
-        <Image Aspect="AspectFill" Source="Cute_Friendship.jpg" />
-        <ScrollView Margin="10,30,10,10"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center">
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="Notification"
+                         IconImageSource="bell_white.png"
+                         Order="Secondary"
+                         Priority="0" />
+            <ToolbarItem Text="UserInfoPager"
+                         IconImageSource="bell_white.png"
+                         Order="Secondary"
+                         Priority="1" />
 
-                </Grid.RowDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="0" Grid.Column="1" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="0" Grid.Column="2" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="1" Grid.Column="0" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="1" Grid.Column="1" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-                <Image Grid.Row="1" Grid.Column="2" Margin="15,10,15, 10" Aspect="AspectFill" Source="I_love_you.jpg" />
-            </Grid>
-        </ScrollView>
-    </StackLayout>
-</ContentPage>
+        </ContentPage.ToolbarItems>
+        <StackLayout>
+            <ImageButton HeightRequest="200" Aspect="AspectFill" Source="Cute_Friendship.jpg" />
+            <ScrollView 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                <FlexLayout Direction="Row"
+                            JustifyContent="SpaceEvenly"
+                            Wrap="Wrap">
+                    <StackLayout Padding="10,10,10,5" >
+                        <Frame Style="{StaticResource frameItems}">
+                            <Image Style="{StaticResource imageItems}" Source="home_white.png" />
+                        </Frame>
+                        <Label Style="{StaticResource imageLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Danh sách" />
+                                    <Span Text="&#10;Khám bệnh mới" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Padding="10,10,10,5" >
+                        <Frame Style="{StaticResource frameItems}">
+                            <Image Style="{StaticResource imageItems}" Source="home_white.png" />
+                        </Frame>
+                        <Label Style="{StaticResource imageLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Lịch Khám bệnh" />
+                                    <!-- <Span Text="&#10;  " /> -->
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Padding="10,10,10,5" >
+                        <Frame Style="{StaticResource frameItems}">
+                            <Image Style="{StaticResource imageItems}" Source="home_white.png" />
+                        </Frame>
+                        <Label Style="{StaticResource imageLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Thống kê" />
+                                    <Span Text="&#10;Doanh thu" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Padding="10,10,10,5" >
+                        <Frame Style="{StaticResource frameItems}">
+                            <Image Style="{StaticResource imageItems}" Source="home_white.png" />
+                        </Frame>
+                        <Label Style="{StaticResource imageLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Bệnh nhân" />
+                                    <Span Text="&#10;Đang chờ" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    
+                    
+                </FlexLayout>
+                <!-- <Grid> -->
+                <!--     <Grid.ColumnDefinitions> -->
+                <!--         <ColumnDefinition Width="*" /> -->
+                <!--         <ColumnDefinition Width="*" /> -->
+                <!--     </Grid.ColumnDefinitions> -->
+                <!--     <Grid.RowDefinitions> -->
+                <!--         <RowDefinition Height="160"/> -->
+                <!--     </Grid.RowDefinitions> -->
+                <!--     <Frame Grid.Row="0" Grid.Column="0" Padding="0"> -->
+                <!--         <ImageButton Aspect="AspectFill" Source="I_love_you.jpg" /> -->
+                <!--     </Frame> -->
+                <!--     <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" Padding="0"> -->
+                <!--         <ImageButton Aspect="AspectFill" Source="I_love_you.jpg" /> -->
+                <!--     </Frame> -->
+                <!--     <Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" Padding="0"> -->
+                <!--         <ImageButton Aspect="AspectFill" Source="I_love_you.jpg" /> -->
+                <!--     </Frame> -->
+                <!--     <Frame Grid.Row="1" Grid.Column="1" CornerRadius="10" Padding="0"> -->
+                <!--         <ImageButton Aspect="AspectFill" Source="I_love_you.jpg" /> -->
+                <!--     </Frame> -->
+                <!--     <Frame Grid.Row="2" Grid.Column="0" CornerRadius="10" Padding="0"> -->
+                <!--         <ImageButton Aspect="AspectFill" Source="I_love_you.jpg" /> -->
+                <!--     </Frame> -->
+                <!--     <Frame Grid.Row="2" Grid.Column="1" CornerRadius="10" Padding="0"> -->
+                <!--         <ImageButton Aspect="AspectFill" Source="I_love_you.jpg" /> -->
+                <!--     </Frame> -->
+                <!-- </Grid> -->
+            </ScrollView>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

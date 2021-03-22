@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace PatientBookingDoctor.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class AboutPage : CarouselPage
     {
         public AboutPage()
         {

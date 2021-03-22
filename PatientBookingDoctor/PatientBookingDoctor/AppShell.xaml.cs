@@ -10,12 +10,12 @@ namespace PatientBookingDoctor
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(NoteEntryPage), typeof(NoteEntryPage));
-            Init();
+            // Init();
         }
-        private void Init()
-        {
-            main_nav.CurrentItem = nav_home;
-        }
+        // private void Init()
+        // {
+        //     main_nav.CurrentItem = nav_home;
+        // }
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//LoginPage");

@@ -1,40 +1,59 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PatientBookingDoctor.Views.AboutPage"
-             Title="About">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
-    </ContentPage.ToolbarItems>
-    <!--
-      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
-      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
-    -->
-    <!-- <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}"> -->
-    <!--     <CollectionView x:Name="ItemsListView" -->
-    <!--                     ItemsSource="{Binding Items}" -->
-    <!--                     SelectionMode="None"> -->
-    <!--         <CollectionView.ItemTemplate> -->
-    <!--             <DataTemplate> -->
-    <!--                 <StackLayout Padding="10" x:DataType="model:Item"> -->
-    <!--                     <Label Text="{Binding Text}"  -->
-    <!--                            LineBreakMode="NoWrap"  -->
-    <!--                            Style="{DynamicResource ListItemTextStyle}"  -->
-    <!--                            FontSize="16" /> -->
-    <!--                     <Label Text="{Binding Description}"  -->
-    <!--                            LineBreakMode="NoWrap" -->
-    <!--                            Style="{DynamicResource ListItemDetailTextStyle}" -->
-    <!--                            FontSize="13" /> -->
-    <!--                     <StackLayout.GestureRecognizers> -->
-    <!--                         <TapGestureRecognizer  -->
-    <!--                             NumberOfTapsRequired="1" -->
-    <!--                             Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		 -->
-    <!--                             CommandParameter="{Binding .}"> -->
-    <!--                         </TapGestureRecognizer> -->
-    <!--                     </StackLayout.GestureRecognizers> -->
-    <!--                 </StackLayout> -->
-    <!--             </DataTemplate> -->
-    <!--         </CollectionView.ItemTemplate> -->
-    <!--     </CollectionView> -->
-    <!-- </RefreshView> -->
-</ContentPage>
+
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="PatientBookingDoctor.Views.AboutPage"
+              Title="About">
+    <ContentPage>
+        <Grid Margin="0,0,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="20,20,20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" FontSize="20" Text="Giới thiệu về ứng dụng" />
+                <Label Grid.Row="1" FontSize="20" Text="Điều khoản sử dụng" />
+                <Label Grid.Row="2" FontSize="20" Text="Hỏi đáp" />
+                <Label Grid.Row="3" FontSize="20" Text="Bản tin" />
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0"  FontSize="20" VerticalOptions="Center" Text="Nhận nhắc lịch" />
+                    <Switch Grid.Column="1" IsToggled="True"/>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" FontSize="20" VerticalOptions="Center" Text="Nhận bản tin"  />
+                    <Switch Grid.Column="1" IsToggled="True" />
+                </Grid>
+
+            </Grid>
+            <Image Grid.Row="1"  Aspect="AspectFill" Source="Cute_Friendship.jpg" />
+        </Grid>
+    </ContentPage>
+</CarouselPage>

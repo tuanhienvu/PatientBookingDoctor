@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PatientBookingDoctor.App">
@@ -30,6 +31,20 @@
             <Setter Property="CornerRadius"
                     Value="5" />
         </Style>
-
+        <Style x:Key="frameItems" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="15" />
+            <Setter Property="BackgroundColor" Value="{StaticResource AppPrimaryColor}" />
+        </Style>
+        <Style x:Key="imageItems" TargetType="ImageButton">
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="WidthRequest" Value="75"/>
+            <Setter Property="HeightRequest" Value="75"/>
+        </Style>
+        <Style x:Key="imageLabel" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
     </Application.Resources>
 </Application>

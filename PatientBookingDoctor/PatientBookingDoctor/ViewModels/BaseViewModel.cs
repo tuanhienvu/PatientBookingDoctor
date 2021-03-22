@@ -1,16 +1,14 @@
-﻿using System;
+﻿using PatientBookingDoctor.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using PatientBookingDoctor.Services;
-using PatientBookingDoctor.Models;
 using Xamarin.Forms;
 
 namespace PatientBookingDoctor.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        // public IDataStore<MenuItems> DataStore => DependencyService.Get<IDataStore<MenuItems>>();
 
         bool isBusy = false;
         public bool IsBusy
