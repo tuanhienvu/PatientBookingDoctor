@@ -33,11 +33,16 @@
                     <RowDefinition Height="30" />
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0"
-                       x:Name="company_name"
-
-                       Style="{DynamicResource TitleStyle}"
-                       Text="Công ty Cổ phần Giải pháp Công nghệ H2A Việt Nam" />
+                <Label x:Name="company_name"
+                       Style="{StaticResource company_name}"
+                       Grid.Row="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="CÔNG TY CỔ PHẦN" />
+                            <Span Text="&#10;GIẢI PHÁP CÔNG NGHỆ H2A VIỆT NAM" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Label x:Name="company_head_title"
                        Grid.Row="1"
                        FontSize="16"

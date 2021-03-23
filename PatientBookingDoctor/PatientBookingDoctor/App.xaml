@@ -21,6 +21,13 @@
                     Value="{StaticResource AppBackgroundColor}" />
         </Style>
 
+        <Style x:Key="company_name" TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="{StaticResource AppPrimaryColor}"/>
+            <!-- <Setter Property="FontAttributes" Value="Bold"/> -->
+        </Style>
+
         <Style TargetType="Button">
             <Setter Property="FontSize"
                     Value="Medium" />
@@ -32,19 +39,40 @@
                     Value="5" />
         </Style>
         <Style x:Key="frameItems" TargetType="Frame">
-            <Setter Property="CornerRadius" Value="15" />
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <!-- <Setter Property="WidthRequest" Value="60"/> -->
+            <Setter Property="HeightRequest" Value="75"/>
             <Setter Property="BackgroundColor" Value="{StaticResource AppPrimaryColor}" />
         </Style>
-        <Style x:Key="imageItems" TargetType="ImageButton">
+        <Style x:Key="imageItems" TargetType="Image">
             <Setter Property="Aspect" Value="AspectFill" />
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Center"/>
-            <Setter Property="WidthRequest" Value="75"/>
-            <Setter Property="HeightRequest" Value="75"/>
+        </Style>
+
+        <Style x:Key="iconItems" TargetType="Image">
+            <!-- <Setter Property="Aspect" Value="AspectFill" /> -->
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="WidthRequest" Value="45"/>
+            <Setter Property="HeightRequest" Value="45"/>
         </Style>
         <Style x:Key="imageLabel" TargetType="Label">
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="imageBanner" TargetType="Image">
+            <Setter Property="HeightRequest" Value="200"/>
+            <Setter Property="Aspect" Value="AspectFill"/>
+        </Style>
+        <Style TargetType="FlexLayout">
+            <Setter Property="Margin" Value="20,25,20,20"/>
+        </Style>
+
+        <Style TargetType="Grid">
+            <Setter Property="Padding" Value="5,5,5,5"/>
         </Style>
     </Application.Resources>
 </Application>

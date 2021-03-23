@@ -7,8 +7,6 @@
 
   <ItemGroup>
     <Compile Remove="Models\LoginViewModel.cs" />
-    <Compile Remove="Services\IDataStore.cs" />
-    <Compile Remove="Services\MockDataStore.cs" />
     <Compile Remove="ViewModels\Menu.xaml.cs" />
     <Compile Remove="ViewModels\MenuDetail.xaml.cs" />
     <Compile Remove="ViewModels\MenuDetailViewModel.cs" />
@@ -69,7 +67,16 @@
     <EmbeddedResource Update="Views\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\NewItemPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\UserInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WaitingPatientDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WaitingPatientPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

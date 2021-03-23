@@ -9,17 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace PatientBookingDoctor.Views
 {
-    public partial class HomePage : CarouselPage
+    public partial class WaitingPatientDetailPage : ContentPage
     {
-        public HomePage()
+        public WaitingPatientDetailPage()
         {
             InitializeComponent();
-        }
-
-        async void OnWPTapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new WaitingPatientPage());
-            // await Shell.Current.GoToAsync("WaitingPatientPage");
+            BindingContext = new WaitingPatientDetailViewModel();
         }
     }
 }

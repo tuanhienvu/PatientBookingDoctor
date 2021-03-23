@@ -3,13 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using PatientBookingDoctor.Services;
 using Xamarin.Forms;
 
 namespace PatientBookingDoctor.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-
+        public WPDataStore<WaitingPatient> DataStore => DependencyService.Get<WPDataStore<WaitingPatient>>();
+        
         bool isBusy = false;
         public bool IsBusy
         {

@@ -42,6 +42,10 @@
         <ShellContent Route="UserInfoPage" ContentTemplate="{DataTemplate views:UserInfoPage}" />
     </FlyoutItem>
 
+    <!-- <FlyoutItem Title="DS Bệnh nhân mới" Icon="user_info_white.png"> -->
+    <!--     <ShellContent Route="WaitingPatientPage" ContentTemplate="{DataTemplate views:WaitingPatientPage}" /> -->
+    <!-- </FlyoutItem> -->
+
     <FlyoutItem Title="Trang Giới thiệu" Icon="about_white.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate views:AboutPage}" />
     </FlyoutItem>

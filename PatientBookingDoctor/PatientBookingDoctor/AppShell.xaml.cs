@@ -9,7 +9,9 @@ namespace PatientBookingDoctor
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(NoteEntryPage), typeof(NoteEntryPage));
+            // Routing.RegisterRoute(nameof(NoteEntryPage), typeof(NoteEntryPage));
+            Routing.RegisterRoute(nameof(WaitingPatientDetailPage), typeof(WaitingPatientDetailPage));
+            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             // Init();
         }
         // private void Init()

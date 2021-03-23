@@ -5,8 +5,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="PatientBookingDoctor.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             x:Class="PatientBookingDoctor.Views.LoginPage">
+
     <ContentPage.Content>
         <StackLayout Margin="50" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
             <Image  Aspect="AspectFit" Source="logo.png" />
@@ -62,11 +62,11 @@
                     </Grid.RowDefinitions>
 
                     <StackLayout Grid.Column="0" Orientation="Vertical" HorizontalOptions="Center">
-                        <ImageButton Style="{StaticResource imageItems}" Source="finger_print_white.png" Command="{Binding ScanQRCode1}"/>
+                        <Image Style="{StaticResource iconItems}" Source="finger_print_white.png" />
                         <Label Text="Quét vân tay" HorizontalTextAlignment="Center" Padding="10" />
                     </StackLayout>
                     <StackLayout Grid.Column="1" Orientation="Vertical" HorizontalOptions="Center">
-                        <ImageButton Style="{StaticResource imageItems}" Source="QRCode_white.png" Clicked="ScanQRCode1"/>
+                        <Image Style="{StaticResource iconItems}" Source="QRCode_white.png" />
                             <Label Text="Quét QR Code" HorizontalTextAlignment="Center" Padding="10" />
                     </StackLayout>
                 </Grid>
